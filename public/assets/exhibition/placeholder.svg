@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+  <rect width="1200" height="900" fill="#f5f4f0"/>
+  <g fill="none" stroke="#222" stroke-width="1.5" opacity=".18">
+    <circle cx="600" cy="365" r="180"/>
+    <circle cx="600" cy="365" r="145"/>
+    <circle cx="600" cy="365" r="110"/>
+    <path d="M330 365h540M600 95v540M410 175l380 380M410 555l380-380"/>
+    <rect x="472" y="237" width="256" height="256" transform="rotate(15 600 365)"/>
+    <rect x="472" y="237" width="256" height="256" transform="rotate(45 600 365)"/>
+    <rect x="472" y="237" width="256" height="256" transform="rotate(75 600 365)"/>
+  </g>
+  <circle cx="600" cy="365" r="7" fill="#222"/>
+  <g text-anchor="middle" fill="#222" font-family="Georgia, serif">
+    <text x="600" y="690" font-size="42" letter-spacing="5">PCD İZMİR 2026</text>
+    <text x="600" y="750" font-size="24" fill="#666">Görsel yakında / Image coming soon</text>
+  </g>
+</svg>

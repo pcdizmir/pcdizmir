@@ -4,8 +4,10 @@ import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css/bundle';
 import './style.css';
 import { initializeLanguageToggle } from './language.js';
+import { renderExhibitionPreview } from './exhibition-preview.js';
 
 document.addEventListener('DOMContentLoaded', () => {
+  renderExhibitionPreview();
   initializeLanguageToggle();
   // 1. Initialize Smooth Eased Particle Background (Black-on-White, Low Kinetic Energy)
   const canvas = document.getElementById('bg-canvas');

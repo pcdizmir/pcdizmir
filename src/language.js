@@ -29,6 +29,7 @@ export function initializeLanguageToggle() {
     toggle.querySelectorAll('[data-language]').forEach(label => {
       label.classList.toggle('is-active', label.dataset.language === language);
     });
+    document.dispatchEvent(new CustomEvent('languagechange', { detail: { language } }));
   }
 
   try {

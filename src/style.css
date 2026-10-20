@@ -531,6 +531,77 @@ figcaption {
   font-weight: 700;
 }
 
+/* Exhibition preview */
+.section-exhibition {
+  padding: 5rem 0;
+  scroll-margin-top: 7rem;
+}
+
+.exhibition-preview {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.exhibition-preview-card {
+  display: block;
+  min-width: 0;
+  padding: 1rem;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.exhibition-preview-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  border-radius: 10px;
+  background: #f5f4f0;
+  margin-bottom: 1rem;
+}
+
+.exhibition-preview-card h3 {
+  font-size: 1.15rem;
+  line-height: 1.4;
+}
+
+.exhibition-preview-artist {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.exhibition-preview-card:hover h3 {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.exhibition-preview-card:focus-visible {
+  outline: 2px solid var(--text-main);
+  outline-offset: 4px;
+}
+
+.exhibition-preview-link {
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 650px) {
+  .exhibition-preview {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: 85%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 0.5rem 0.25rem 1rem;
+  }
+  .exhibition-preview .exhibition-preview-card {
+    padding: 1rem;
+    scroll-snap-align: start;
+  }
+}
+
 /* Location Section */
 .section-location {
   padding: 5rem 0;
