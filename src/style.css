@@ -262,8 +262,15 @@ a:hover {
   outline-offset: 3px;
 }
 
-#register {
+#register,
+#schedule {
   scroll-margin-top: 7rem;
+}
+
+.intro-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
 }
 
 .site-header {
@@ -340,6 +347,7 @@ a:hover {
   min-width: 0;
 }
 
+.workshops-heading,
 .workshop-details {
   grid-column: 1 / -1;
 }
@@ -671,6 +679,41 @@ figcaption {
   color: inherit;
 }
 
+.faq-page {
+  padding-top: 9rem;
+  padding-bottom: 4rem;
+}
+
+.faq-page h1 {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  line-height: 1.2;
+  margin-bottom: 2.5rem;
+  overflow-wrap: anywhere;
+}
+
+.faq-list {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.faq-item h2 {
+  font-size: clamp(1.15rem, 3vw, 1.5rem);
+  font-weight: 700;
+}
+
+.faq-item p {
+  margin-bottom: 0;
+}
+
+.faq-item > a {
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.faq-back {
+  margin-top: 2rem;
+}
+
 /* Mobile Responsive */
 @media (max-width: 850px) {
   .site-header {
@@ -728,8 +771,9 @@ figcaption {
     font-size: clamp(0.85rem, 3.6vw, 1.1rem);
   }
   .header-actions {
-    flex-wrap: nowrap;
-    flex-shrink: 0;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    flex-shrink: 1;
     gap: 0.25rem;
   }
   .header-actions .cta-small {
