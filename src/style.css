@@ -1,4 +1,6 @@
-/* ==========================================================================
+
+
+          /* ==========================================================================
    Processing Community Day İzmir (PCD İzmir) Theme CSS
    Inika Serif Font Application & Hero Typography Spacing
    ========================================================================== */
@@ -310,15 +312,53 @@ a:hover {
 
 /* Hero Section (Bottom Left Layout) */
 .section-hero {
-  height: 95vh;
+  --hero-inline-padding: 3rem;
+  min-height: 95vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   align-items: flex-start;
   padding: 8rem 3rem 4rem;
   max-width: 1200px;
-  margin: 1 rem;
   margin-bottom: -0.2rem;
+}
+
+.hero-invitation {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  margin: auto 0 auto calc(-1 * var(--hero-inline-padding));
+  padding: 0 1.5rem;
+}
+
+.blue-text-card {
+  width: 100%;
+  max-width: 1000px;
+  padding: 1.5rem 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  background: rgba(4, 104, 255, 0.72);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(14px);
+  text-align: center;
+}
+
+.hero-invitation p {
+  max-width: 760px;
+  margin: 0 auto 0.65rem;
+  color: #ffffff;
+  line-height: 1.5;
+}
+
+.hero-invitation p:last-child {
+  margin-bottom: 0;
+}
+
+.hero-invitation .hero-invitation-lead {
+  max-width: none;
+  margin-bottom: 2rem;
+  font-size: clamp(2.5rem, 7vw, 5.4rem);
+  font-weight: 700;
+  line-height: 1.15;
 }
 
 .hero-text-card {
@@ -531,6 +571,77 @@ figcaption {
   font-weight: 700;
 }
 
+/* Exhibition preview */
+.section-exhibition {
+  padding: 5rem 0;
+  scroll-margin-top: 7rem;
+}
+
+.exhibition-preview {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.exhibition-preview-card {
+  display: block;
+  min-width: 0;
+  padding: 1rem;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.exhibition-preview-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  border-radius: 10px;
+  background: #f5f4f0;
+  margin-bottom: 1rem;
+}
+
+.exhibition-preview-card h3 {
+  font-size: 1.15rem;
+  line-height: 1.4;
+}
+
+.exhibition-preview-artist {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.exhibition-preview-card:hover h3 {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.exhibition-preview-card:focus-visible {
+  outline: 2px solid var(--text-main);
+  outline-offset: 4px;
+}
+
+.exhibition-preview-link {
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 650px) {
+  .exhibition-preview {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: 85%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 0.5rem 0.25rem 1rem;
+  }
+  .exhibition-preview .exhibition-preview-card {
+    padding: 1rem;
+    scroll-snap-align: start;
+  }
+}
+
 /* Location Section */
 .section-location {
   padding: 5rem 0;
@@ -723,6 +834,7 @@ figcaption {
     padding: 0.45rem 0.75rem;
   }
   .section-hero {
+    --hero-inline-padding: 1.5rem;
     padding: 7rem 1.5rem 3rem;
   }
   .hero-text-card, .text-card {
