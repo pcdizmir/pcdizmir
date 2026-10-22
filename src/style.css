@@ -310,15 +310,53 @@ a:hover {
 
 /* Hero Section (Bottom Left Layout) */
 .section-hero {
-  height: 95vh;
+  --hero-inline-padding: 3rem;
+  min-height: 95vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   align-items: flex-start;
   padding: 8rem 3rem 4rem;
   max-width: 1200px;
-  margin: 1 rem;
   margin-bottom: -0.2rem;
+}
+
+.hero-invitation {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  margin: auto 0 auto calc(-1 * var(--hero-inline-padding));
+  padding: 0 1.5rem;
+}
+
+.blue-text-card {
+  width: 100%;
+  max-width: 1000px;
+  padding: 1.5rem 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 24px;
+  background: rgba(4, 104, 255, 0.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  text-align: center;
+}
+
+.hero-invitation p {
+  max-width: 760px;
+  margin: 0 auto 0.65rem;
+  color: #ffffff;
+  line-height: 1.5;
+}
+
+.hero-invitation p:last-child {
+  margin-bottom: 0;
+}
+
+.hero-invitation .hero-invitation-lead {
+  max-width: none;
+  margin-bottom: 2rem;
+  font-size: clamp(2.5rem, 7vw, 5.4rem);
+  font-weight: 700;
+  line-height: 1.15;
 }
 
 .hero-text-card {
@@ -794,6 +832,7 @@ figcaption {
     padding: 0.45rem 0.75rem;
   }
   .section-hero {
+    --hero-inline-padding: 1.5rem;
     padding: 7rem 1.5rem 3rem;
   }
   .hero-text-card, .text-card {
