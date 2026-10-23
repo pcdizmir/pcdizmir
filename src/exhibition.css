@@ -12,6 +12,14 @@
   margin-bottom: 1.25rem;
 }
 
+.exhibition-thumbnail-note {
+  max-width: 52rem;
+  margin: 0 0 2rem;
+  color: #963d42;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
 .exhibition-page .visually-hidden {
   position: absolute;
   width: 1px;

@@ -124,7 +124,8 @@
     "mediumTr": "JavaScript, cables.gl",
     "mediumEn": "JavaScript, cables.gl",
     "projectLinks": [
-      "https://objkt.com/tokens/KT1NkvxfmbGPQG3g7qnJnBbdwKGGkivFAccJ/25"
+      "https://objkt.com/tokens/KT1NkvxfmbGPQG3g7qnJnBbdwKGGkivFAccJ/25",
+      "https://assets.objkt.media/rewrite/file/assets-003/bafybeicq3vidutsrzwtmm6xovq7pmkza5h2dyogu4crkpndimezridnwam/artifact/index.html?creators=tz1NDAQE9it7RRGDMTjEFG6XK5sRNdasRBv7&objkt=25&viewer=tz2DR9G9xP1tu6x147Ls5WyrdgnJ9D8QUd9R"
     ]
   },
   {
@@ -191,10 +192,7 @@
     "algorithmsTr": "Kod ve algoritmalar, sanat üretmek için kendine özgü bir ifade ortamı sunar. Eseri doğrudan oluşturmak yerine, onu üreten bir sistem tasarlarım. Bu sistem, kendi başına, ürettiği herhangi bir görüntü kadar eserin bir parçasıdır.",
     "algorithmsEn": "Code and algorithms are a special medium for making art. Instead of creating the artwork directly, my role shifts to designing a system that generates it. In and of itself, that system is as much the artwork as any single image it produces.",
     "mediumTr": "p5.js",
-    "mediumEn": "p5.js",
-    "projectLinks": [
-      "https://drive.google.com/drive/folders/1-CgS0vs_nL5ooVE8X-90B_nhncEVIT-h?usp=drive_link"
-    ]
+    "mediumEn": "p5.js"
   },
   {
     "id": "i-think-i-m-going-blind",
@@ -240,9 +238,7 @@
     "algorithmsEn": "Algorithms define how the particle clusters bend, expand, and flow, creating fluid forms through trigonometric functions and controlled randomness. Interaction rules translate cursor movements into traces by clicking into gray interventions that release both gray and new blue branches; more flood. These rules make the viewer’s actions part of the composition, expressing how small human interventions can accumulate and reshape a waterway.",
     "mediumTr": "Processing 4 (Java); prosedürel 3B parçacık biçimleri ve gerçek zamanlı fare etkileşimi için P3D/OpenGL görüntüleyicisi",
     "mediumEn": "Processing 4 (Java), using the P3D/OpenGL renderer for procedural 3D particle forms and real-time mouse interaction.",
-    "projectLinks": [
-      "https://docs.google.com/document/d/1b9RaoMFTzJzWNlXi4FUNz-8rJyOOE4dIKTm_BL5MYqQ/edit?usp=sharing"
-    ]
+    "projectLinks": []
   },
   {
     "id": "unravel",
@@ -359,5 +355,22 @@
     "title": "Raphaël de Courville",
     "artist": "Raphaël de Courville",
     "thumbnail": "/assets/exhibition/raphael_s171029_alt_landscape_4min.webp"
+  },
+  {
+    "id": "noema",
+    "title": "Noema",
+    "artist": "Pawel Dudko",
+    "thumbnail": "/assets/exhibition/Noema loop 03 - Paweł Dudko.webp",
+    "descriptionTr": "Noema, her biri Bitcoin blockchain’inde kalıcı bir 1/1 eser olarak kaydedilen ve kaynak betiğinden doğrudan render alan generatif sonsuz animasyonlar serisidir. Seri, Husserl’in noema kavramından esinlenir: görüntü, nesnenin kendisi değil, bilincin işlediği imgedir. Bunu kasıtlı unutma pratiğiyle inşa ettim: Her algoritmayı kodluyor, haftalarca bir kenara bırakıyor ve hafızamın hatırladığımı yeniden şekillendirmesini bekledikten sonra tekrar açıyorum. Görülen ile düşünülen iç içe geçiyor; sanki görüntüler yalnızca belirlenmiş formlar değil, bilincin izleriymiş gibi.",
+    "descriptionEn": "Noema is a series of generative infinite animations, each inscribed as a permanent 1/1 work on the Bitcoin blockchain and rendering directly from its source script. The series draws from Husserl's concept of the noema: the image as processed by consciousness, rather than the thing itself. I built it through a practice of deliberate forgetting: I code each algorithm, set it aside for weeks, then reopen it once memory has reshaped what I remember. What is seen intertwines with what is thought, as if the images are not merely determined forms, but traces of consciousness itself.",
+    "bioTr": "Dr. Paweł Dudko (d. 1987), görüntü, nesne ve mekânsal enstalasyonlar üreten sistemler inşa etmek için kod, 3D baskı ve blockchain ile çalışır. Gdańsk Güzel Sanatlar Akademisi Heykel ve Intermedia Fakültesi’nden doktora derecesine (2018) ve Białystok Teknoloji Üniversitesi’nden mimarlık derecesine sahiptir; 2012-2022 yılları arasında araştırmacı ve öğretim görevlisi olarak çalışmıştır. Çalışmaları uluslararası alanda sunulmuş olup, solo sergiler arasında Suburbs Gallery, Montreal (2025) ve Ex-Machina, Baszta Gallery, Polonya (2021) yer almaktadır. Grup sunumları arasında Sotheby's, Mark Rothko Art Center, Tokyo Node'da NEORT tarafından düzenlenen Digital Springboard ve The Bitcoin Conference Miami bulunmaktadır. Polonya Kültür ve Ulusal Miras Bakanlığı'ndan burs ödülü almıştır (2020).",
+    "bioEn": "Dr. Paweł Dudko (b. 1987) works with code, 3D printing, and blockchain to build systems that generate images, objects, and spatial installations. He holds a doctoral degree in arts from the Faculty of Sculpture and Intermedia at the Academy of Fine Arts in Gdańsk (2018) and a degree in architecture from the Białystok University of Technology, where he was a researcher and lecturer from 2012 to 2022.His work has been presented internationally, including solo exhibitions at Suburbs Gallery, Montreal (2025), and Ex-Machina, Baszta Gallery, Poland (2021). Group presentations include Sotheby's, the Mark Rothko Art Center, Digital Springboard by NEORT at Tokyo Node, and The Bitcoin Conference Miami. He has received scholarship award from Poland's Ministry of Culture and National Heritage (2020).",
+    "algorithmsTr": "Algoritmalar her yarattığım şeyin temelini oluşturuyor, ancak onları bir araç olarak ele alıp diyalog kurmaya çalışıyorum. Noema’da her parça, blockchain üzerindeki kaynak betiğinden doğrudan render alıyor; algoritma esere giden bir adım değil, eserin kendisi oluyor. Yine de her birini kodluyor ve haftalarca bir kenara bırakıyorum; böylece geri döndüğümde hafızam, yarattığımı düşündüğüm şeyi çoktan yeniden şekillendirmiş oluyor. Kuralları harekete geçiriyor ve geri çekiliyorum; ardından sistemin dilini o kadar iyi öğreniyorum ki, bana ne gönderdiğini duyabiliyorum.",
+    "algorithmsEn": "Algorithms are the foundation of everything I create, but I try to treat them as a tool I'm dialog with. In Noema, each piece renders directly from its source script on the blockchain, so the algorithm isn’t a step toward the work; it is the work. Yet I code each one and then set it aside for weeks, so that when I return, my memory has already reshaped what I thought I created. I set the rules in motion and step back, then learn the system’s language well enough to hear what it sends back.",
+    "mediumTr": "Three.js, WebGL",
+    "mediumEn": "Three.js, WebGL",
+    "projectLinks": [
+      "https://ordinals.com/content/00023040711629c182f053961c3a0e15d4f4228cf53462c01067629521046c33i0"
+    ]
   }
 ]

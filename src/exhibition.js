@@ -171,12 +171,16 @@ if (artworks.length) {
   slides.querySelectorAll('img').forEach(image => {
     image.addEventListener('load', () => swiper.updateAutoHeight());
     image.addEventListener('error', () => swiper.updateAutoHeight());
-    image.addEventListener('click', event => {
-      if (!image.closest('.swiper-slide-active')) return;
-      const { left, width } = image.getBoundingClientRect();
-      if (event.clientX < left + width / 2) swiper.slidePrev();
-      else swiper.slideNext();
-    });
+  });
+  document.addEventListener('click', event => {
+    if (event.button !== 0 || event.defaultPrevented || !(event.target instanceof Element)) return;
+    if (event.target.closest('a, button, input, textarea, select, summary, .artwork-content, .site-header, .exhibition-arrows, .exhibition-controls')) return;
+    const image = slides.children[swiper.activeIndex]?.querySelector('.artwork-thumbnail');
+    if (!image || image.hidden) return;
+    const { top, bottom, left, width } = image.getBoundingClientRect();
+    if (event.clientY < top || event.clientY > bottom) return;
+    if (event.clientX < left + width / 2) swiper.slidePrev();
+    else swiper.slideNext();
   });
   document.addEventListener('keydown', event => {
     if (event.key !== 'ArrowRight' && event.key !== 'ArrowLeft') return;

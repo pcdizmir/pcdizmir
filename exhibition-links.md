@@ -73,3 +73,6 @@ Use these URLs to generate the printed QR codes. Each link opens the artwork and
 
 - **Raphaël de Courville**
   https://pcdizmir.kodart.xyz/exhibition.html#raphael-de-courville
+
+- **Noema** — Pawel Dudko
+  https://pcdizmir.kodart.xyz/exhibition.html#noema
