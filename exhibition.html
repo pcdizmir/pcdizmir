@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Sergi — PCD İzmir 2026</title>
+    <meta name="description" content="Processing Community Day İzmir 2026 sergisi: eserler, sanatçılar ve yaratıcı kodlama çalışmaları." />
+    <link rel="canonical" href="https://pcdizmir.kodart.xyz/exhibition.html" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="site-header" id="site-header">
+      <a href="/" class="wordmark">PCD İZMİR</a>
+      <nav class="header-actions" aria-label="Ana menü" data-en-aria-label="Main navigation">
+        <button class="language-toggle" type="button" id="language-toggle" aria-label="Switch to English" aria-pressed="false">
+          <span lang="tr" data-language="tr">TR</span><span aria-hidden="true"> / </span><span lang="en" data-language="en">EN</span>
+        </button>
+        <a href="/" class="cta-small" data-en="Home">Ana Sayfa</a>
+        <a href="/sss.html" class="cta-small" data-en="FAQ">SSS</a>
+        <a href="/#register" class="cta-small" data-en="Workshops">Atölyeler</a>
+      </nav>
+    </header>
+    <main class="exhibition-page container">
+      <h1 data-en="Exhibition">Sergi</h1>
+      <p class="visually-hidden" data-en="Discover the artworks and artists of Processing Community Day İzmir 2026.">PCD 2026 Sergisi.</p>
+      <p id="exhibition-status" class="text-card" role="status" data-en="Coming soon. Exhibition artworks will be shared here.">Yakında. Sergi eserleri burada paylaşılacak.</p>
+      <section id="exhibition-gallery" hidden aria-label="Sergi eserleri" data-en-aria-label="Exhibition artworks">
+        <nav class="exhibition-arrows" hidden aria-label="Eserler arasında gezin" data-en-aria-label="Browse artworks">
+          <button type="button" class="exhibition-previous" aria-controls="artwork-slides" aria-label="Önceki eser" data-en-aria-label="Previous artwork"><span aria-hidden="true">‹</span></button>
+          <button type="button" class="exhibition-next" aria-controls="artwork-slides" aria-label="Sonraki eser" data-en-aria-label="Next artwork"><span aria-hidden="true">›</span></button>
+        </nav>
+        <div class="swiper exhibition-carousel" tabindex="0" role="region" aria-label="Eserler arasında gezin" data-en-aria-label="Browse artworks">
+          <div class="swiper-wrapper" id="artwork-slides"></div>
+        </div>
+        <nav class="exhibition-controls" hidden aria-label="Eser gezinme kontrolleri" data-en-aria-label="Artwork navigation">
+          <div class="exhibition-pagination"></div>
+        </nav>
+      </section>
+      <noscript><p>Eserleri görüntülemek için JavaScript’i etkinleştirin. / Enable JavaScript to view the artworks.</p></noscript>
+      <p class="exhibition-back"><a href="/" data-en="Back to Home">Ana Sayfaya Dön</a></p>
+    </main>
+    <script type="module" src="/src/exhibition.js"></script>
+  </body>
+</html>

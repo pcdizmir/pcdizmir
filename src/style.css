@@ -343,6 +343,11 @@ a:hover {
   text-align: center;
 }
 
+.hero-invitation .blue-text-card {
+  transform: translateY(-1.5rem) scale(0.95);
+  transform-origin: center;
+}
+
 .hero-invitation p {
   max-width: 760px;
   margin: 0 auto 0.65rem;
@@ -388,9 +393,28 @@ a:hover {
   min-width: 0;
 }
 
-.workshops-heading,
-.workshop-details {
+.workshop-card {
   grid-column: 1 / -1;
+  justify-self: center;
+  width: 100%;
+  text-align: left;
+}
+
+.workshop-main {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.workshop-main > * {
+  min-width: 0;
+}
+
+.workshop-card .workshop-details {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color);
 }
 
 .workshop-facts {
@@ -578,6 +602,30 @@ figcaption {
   scroll-margin-top: 7rem;
 }
 
+.exhibition-intro-card {
+  margin: 0 auto 2rem;
+}
+
+.exhibition-intro-card > h2,
+.exhibition-intro-card > p {
+  color: #ffffff;
+  text-align: left;
+}
+
+.exhibition-intro-card > p {
+  max-width: 760px;
+  margin: 0;
+}
+
+.exhibition-intro-card .exhibition-preview {
+  margin-top: 1.5rem;
+}
+
+.exhibition-intro-card .exhibition-preview-card {
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.9);
+}
+
 .exhibition-preview {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -628,14 +676,24 @@ figcaption {
   margin-top: 1.5rem;
 }
 
+.exhibition-intro-card > .exhibition-preview-link {
+  max-width: none;
+  margin-top: 1.5rem;
+}
+
+.exhibition-intro-card .exhibition-preview-link a {
+  color: #ffffff;
+  font-weight: 700;
+}
+
 @media (max-width: 650px) {
   .exhibition-preview {
     grid-template-columns: none;
     grid-auto-flow: column;
-    grid-auto-columns: 85%;
+    grid-auto-columns: 100%;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    padding: 0.5rem 0.25rem 1rem;
+    padding: 0 0 1rem;
   }
   .exhibition-preview .exhibition-preview-card {
     padding: 1rem;
@@ -844,6 +902,10 @@ figcaption {
   .section-intro, .open-call, .side-by-side {
     grid-template-columns: 1fr;
     gap: 2.5rem;
+  }
+  .workshop-main {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
   .swiper-slide {
     width: 90%;
