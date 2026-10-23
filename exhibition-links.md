@@ -47,7 +47,7 @@ Use these URLs to generate the printed QR codes. Each link opens the artwork and
 - **Feelings** — AC Futures
   https://pcdizmir.kodart.xyz/exhibition.html#feelings
 
-- **Traces of Intervention** — Gozde Damla Turhan
+- **Traces of Intervention** — Gözde Damla Turhan
   https://pcdizmir.kodart.xyz/exhibition.html#traces-of-intervention
 
 - **Unravel** — Buse Anıl
@@ -74,5 +74,5 @@ Use these URLs to generate the printed QR codes. Each link opens the artwork and
 - **Raphaël de Courville**
   https://pcdizmir.kodart.xyz/exhibition.html#raphael-de-courville
 
-- **Noema** — Pawel Dudko
+- **Noema** — Paweł Dudko
   https://pcdizmir.kodart.xyz/exhibition.html#noema

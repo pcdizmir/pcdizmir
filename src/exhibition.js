@@ -55,6 +55,29 @@ function artworkSlide(artwork, index) {
   if (artwork.artist) artist.textContent = artwork.artist;
   artist.hidden = artwork.artist === artwork.title;
   content.append(title, artist);
+  if (artwork.artistLocation) {
+    content.classList.add('has-artist-location');
+    const location = document.createElement('p');
+    location.className = 'artwork-location';
+    const icon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    icon.setAttribute('viewBox', '0 0 24 24');
+    icon.setAttribute('fill', 'none');
+    icon.setAttribute('stroke', 'currentColor');
+    icon.setAttribute('stroke-width', '1.8');
+    icon.setAttribute('stroke-linecap', 'round');
+    icon.setAttribute('stroke-linejoin', 'round');
+    icon.setAttribute('aria-hidden', 'true');
+    icon.classList.add('artwork-location-icon');
+    const outline = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    outline.setAttribute('cx', '12');
+    outline.setAttribute('cy', '12');
+    outline.setAttribute('r', '9');
+    const lines = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    lines.setAttribute('d', 'M3 12h18M12 3c2.5 2.5 4 5.5 4 9s-1.5 6.5-4 9M12 3c-2.5 2.5-4 5.5-4 9s1.5 6.5 4 9');
+    icon.append(outline, lines);
+    location.append(translated('span', 'Konum:', 'Location:', 'visually-hidden'), icon, document.createTextNode(artwork.artistLocation));
+    content.append(location);
+  }
 
   const details = document.createElement('details');
   details.className = 'artwork-details swiper-no-swiping';

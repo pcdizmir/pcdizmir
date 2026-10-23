@@ -752,6 +752,25 @@ figcaption {
   font-size: 1.05rem;
 }
 
+.plan-talks {
+  min-width: 0;
+}
+
+.plan-talks ul {
+  margin: 0.75rem 0 0;
+  padding-left: 1.25rem;
+}
+
+.plan-talks li {
+  color: var(--text-main);
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.plan-talks li + li {
+  margin-top: 0.35rem;
+}
+
 .planning .spacer {
   height: 1.25rem;
 }

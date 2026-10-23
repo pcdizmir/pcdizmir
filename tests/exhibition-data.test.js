@@ -75,12 +75,14 @@ test('JSON keeps Unicode, quotes, order, and paragraph breaks', () => {
 });
 
 test('optional fields stay editable and missing details stay empty', () => {
-  const [work] = parse([{ ...sample, mediumTr: 'Türkçe araçlar', year: '2026', artistUrl: 'https://example.com', projectLinks: ['https://example.com/art'] }]);
+  const [work] = parse([{ ...sample, artistLocation: 'İzmir', mediumTr: 'Türkçe araçlar', year: '2026', artistUrl: 'https://example.com', projectLinks: ['https://example.com/art'] }]);
+  assert.equal(work.artistLocation, 'İzmir');
   assert.equal(work.medium, 'Türkçe araçlar');
   assert.equal(work.artistUrl, 'https://example.com/');
   assert.deepEqual(work.projectLinks, ['https://example.com/art']);
   const [incomplete] = parse([{ id: 'unfinished', title: 'Unfinished' }]);
   assert.equal(incomplete.artist, '');
+  assert.equal(incomplete.artistLocation, '');
   assert.equal(incomplete.thumbnail, '');
   assert.equal(incomplete.descriptionTr, '');
   assert.deepEqual(incomplete.projectLinks, []);
@@ -101,8 +103,15 @@ test('invalid JSON, identities, paths, and links fail validation', () => {
 });
 
 test('the JSON includes all artwork details and mapped thumbnails', () => {
-  assert.equal(artworks.length, 24);
-  assert.equal(artworks.filter(work => work.thumbnail).length, 24);
+  assert.equal(artworks.length, 25);
+  assert.equal(artworks.filter(work => work.artistLocation).length, 25);
+  assert.equal(artworks.find(work => work.id === 'noema').artistLocation, 'Poland/Georgia');
+  assert.equal(artworks.find(work => work.id === 'some-parts-of-me').artistLocation, 'Düsseldorf');
+  assert.equal(artworks.find(work => work.id === 'underlayer').artistLocation, 'İstanbul');
+  assert.ok(artworks.filter(work => work.artistLocation === 'İzmir').length > 0);
+  assert.equal(artworks.find(work => work.id === 'noema').artist, 'Paweł Dudko');
+  assert.equal(artworks.find(work => work.id === 'traces-of-intervention').artist, 'Gözde Damla Turhan');
+  assert.equal(artworks.filter(work => work.thumbnail).length, 25);
   assert.equal(artworks.find(work => work.title === 'Memento').thumbnail, '/assets/exhibition/memento-loop - Berkin Dündar.webp');
   assert.equal(artworks.find(work => work.title === 'Glass shattered, but I still see.').thumbnail, '/assets/exhibition/trim_E112025F-AB03-4689-8A49-5797620C0668 (1) - Ali Osman Bayram.webp');
   const raphael = artworks.find(work => work.title === 'Raphaël de Courville');

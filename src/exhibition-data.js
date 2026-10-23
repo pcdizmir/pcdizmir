@@ -1,7 +1,7 @@
 import { artworkId } from './exhibition-links.js';
 
 const textFields = [
-  'artist', 'descriptionTr', 'descriptionEn', 'bioTr', 'bioEn',
+  'artist', 'artistLocation', 'descriptionTr', 'descriptionEn', 'bioTr', 'bioEn',
   'algorithmsTr', 'algorithmsEn', 'year', 'mediumTr', 'mediumEn', 'artistUrl',
 ];
 
@@ -66,7 +66,7 @@ export function parseExhibition(json) {
     }
 
     return {
-      id, title, artist: strings.artist, thumbnail,
+      id, title, artist: strings.artist, artistLocation: strings.artistLocation, thumbnail,
       descriptionTr: strings.descriptionTr, descriptionEn: strings.descriptionEn,
       bioTr: strings.bioTr, bioEn: strings.bioEn,
       algorithmsTr: strings.algorithmsTr, algorithmsEn: strings.algorithmsEn,

@@ -18,6 +18,7 @@ within each group.
 | --- | --- |
 | `id` | Permanent URL identifier; keep it unchanged after QR codes are printed |
 | `title`, `artist` | Original artwork title and artist name |
+| `artistLocation` | Artist location displayed with a globe icon beneath the name |
 | `thumbnail` | `/assets/exhibition/filename.webp` for a file under `public/assets/exhibition/` |
 | `descriptionTr`, `descriptionEn` | Artwork descriptions in Turkish and English |
 | `bioTr`, `bioEn` | Artist biographies in Turkish and English |
