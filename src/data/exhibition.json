@@ -365,8 +365,8 @@
     "descriptionEn": "A fractal system created for the MATRIX exhibition at YARAT Contemporary Art Space. It depicts flowing plant forms that contrast the real and the artificial.",
     "bioTr": "Onat Saygı, İzmir’de yaşayan algoritmik sanatçı ve bilgisayar bilimcisidir. Dokuz Eylül Üniversitesi Güzel Sanatlar Enstitüsü Müzik Teknolojisi Yüksek Lisans programında eğitimini sürdürmektedir.\n\nAlgoritma ve görsel üretimi bir araya getiren çalışmalarında sistemler, etkileşim ve değişkenlik üzerine çalışmakta; izleyiciyi işin oluşum sürecinin bir parçası hâline getiren deneyimler tasarlamaktadır.",
     "bioEn": "Onat Saygı is an algorithmic artist and computer scientist based in İzmir. He is pursuing a master’s degree in Music Technology at the Graduate School of Fine Arts, Dokuz Eylül University.\n\nCombining algorithms and visual creation, his practice explores systems, interaction, and variability. He designs experiences that make the viewer part of the work’s creation process.",
-    "algorithmsTr": "Fraktal sistemler, ve noise. Daha uzun yazıcam müsait olunca",
-    "algorithmsEn": "Fractal systems and noise. More detail to follow.",
+    "algorithmsTr": "Fraktal sistemler, ve noise.",
+    "algorithmsEn": "Fractal systems and noise.",
     "mediumTr": "p5.js, arduino",
     "mediumEn": "p5.js, arduino",
     "projectLinks": [
@@ -377,7 +377,13 @@
     "id": "raphael-de-courville",
     "title": "Raphaël de Courville",
     "artist": "Raphaël de Courville",
-    "artistLocation": "Berlin",
+    "descriptionEn":"s171029_alt is a remake of a piece from Raphaël de Courville's Aesthoplasm series. The original was one of around 200 looping GIF animations created daily between April and December 2017.",
+    "descriptionTr":"s171029_alt, Raphaël de Courville'un Aesthoplasm serisinden bir parçanın yeniden yapımıdır. Orijinal, Nisan ve Aralık 2017 arasında her gün oluşturulan yaklaşık 200 döngüsel GIF animasyonundan biriydi.",
+    "bioEn":"Raphaël de Courville is a prominent French generative artist, interaction designer, and creative technologist who is deeply involved in the global creative coding community. Originally from Paris, he is currently based in Berlin. Since 2022  he is serving as Processing Comunity lead for the Processing Foundation, he guides the global community centered on Processing and p5.js to foster visual literacy.",
+    "bioTr":"Raphaël de Courville, küresel yaratıcı kodlama topluluğuna derinlemesine dahil olan önde gelen bir Fransız generatif sanatçı, etkileşim tasarımcısı ve yaratıcı teknoloğudur. Aslen Parisli olan sanatçı, şu anda Berlin’de yaşamaktadır. 2022’den bu yana Processing Foundation için Processing Topluluğu lideri olarak görev yapmaktadır; Processing ve p5.js merkezli küresel topluluğu yönlendirerek görsel okuryazarlığı teşvik etmektedir.",
+    "mediumEN":"Original: Processing and GLSL. Remake: p5.js and GLSL.",
+    "mediumTR":"Orijinal: Processing ve GLSL. Yeniden Yapım: p5.js ve GLSL.",
+    "artistLocation": "France/Berlin",
     "thumbnail": "/assets/exhibition/raphael_s171029_alt_landscape_4min.webp"
   },
   {
