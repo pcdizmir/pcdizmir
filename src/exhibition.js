@@ -25,7 +25,7 @@ function artworkSlide(artwork, index) {
 
   const image = document.createElement('img');
   image.className = 'artwork-thumbnail';
-  image.src = artwork.thumbnail || '/assets/exhibition/placeholder.svg';
+  if (artwork.thumbnail) image.src = artwork.thumbnail;
   image.alt = `${artwork.title} — ${artwork.artist}`;
   if (!artwork.thumbnail) {
     image.alt = `${artwork.title} — Görsel yakında`;
@@ -34,7 +34,8 @@ function artworkSlide(artwork, index) {
   image.loading = index === 0 ? 'eager' : 'lazy';
   image.decoding = 'async';
   const missing = translated('p', 'Görsel yakında.', 'Image coming soon.', 'artwork-image-missing');
-  missing.hidden = true;
+  image.hidden = !artwork.thumbnail;
+  missing.hidden = Boolean(artwork.thumbnail);
   image.addEventListener('error', () => {
     image.hidden = true;
     missing.textContent = document.documentElement.lang === 'en' ? 'Image unavailable.' : 'Görsel yüklenemedi.';
@@ -52,6 +53,7 @@ function artworkSlide(artwork, index) {
     : translated('p', 'Sanatçı bilgisi paylaşılmadı.', 'Artist information not provided.');
   artist.className = 'artwork-artist';
   if (artwork.artist) artist.textContent = artwork.artist;
+  artist.hidden = artwork.artist === artwork.title;
   content.append(title, artist);
 
   const details = document.createElement('details');
@@ -99,7 +101,7 @@ function artworkSlide(artwork, index) {
     link.rel = 'noopener noreferrer';
     details.append(link);
   }
-  content.append(details);
+  if (details.children.length > 1) content.append(details);
   slide.append(content);
   return slide;
 }
@@ -138,9 +140,9 @@ if (artworks.length) {
   const carousel = gallery.querySelector('.exhibition-carousel');
   const swiper = new Swiper(carousel, {
     modules: [Navigation],
-    slidesPerView: 'auto',
-    centeredSlides: true,
-    spaceBetween: 24,
+    slidesPerView: 1,
+    centeredSlides: false,
+    spaceBetween: 0,
     autoHeight: true,
     loop: false,
     speed: reducedMotion ? 0 : 300,
@@ -169,14 +171,20 @@ if (artworks.length) {
   slides.querySelectorAll('img').forEach(image => {
     image.addEventListener('load', () => swiper.updateAutoHeight());
     image.addEventListener('error', () => swiper.updateAutoHeight());
+    image.addEventListener('click', event => {
+      if (!image.closest('.swiper-slide-active')) return;
+      const { left, width } = image.getBoundingClientRect();
+      if (event.clientX < left + width / 2) swiper.slidePrev();
+      else swiper.slideNext();
+    });
   });
-  carousel.addEventListener('keydown', event => {
-    if (event.target.closest('details, a, button')) return;
-    if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
-      event.preventDefault();
-      if (event.key === 'ArrowRight') swiper.slideNext();
-      else swiper.slidePrev();
-    }
+  document.addEventListener('keydown', event => {
+    if (event.key !== 'ArrowRight' && event.key !== 'ArrowLeft') return;
+    if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+    if (event.target instanceof Element && event.target.closest('input, textarea, select, [contenteditable="true"]')) return;
+    event.preventDefault();
+    if (event.key === 'ArrowRight') swiper.slideNext();
+    else swiper.slidePrev();
   });
   document.getElementById('language-toggle').addEventListener('click', () => {
     requestAnimationFrame(() => swiper.updateAutoHeight());
@@ -188,11 +196,11 @@ if (artworks.length) {
     if (index < 0) return;
     swiper.slideTo(index, 0);
     const details = slides.children[index].querySelector('details');
-    details.open = true;
+    if (details) details.open = true;
     requestAnimationFrame(() => {
       swiper.updateAutoHeight();
       gallery.scrollIntoView({ behavior: 'instant', block: 'start' });
-      details.querySelector('summary').focus({ preventScroll: true });
+      (details?.querySelector('summary') || carousel).focus({ preventScroll: true });
     });
   }
 

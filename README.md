@@ -8,41 +8,37 @@ Run `npm install` and `npm run dev`. Run `npm run build` to generate the product
 
 ## Exhibition content
 
-The exhibition is at `/exhibition.html`. Edit `src/data/exhibition.csv` to add or
-reorder artworks; each row is one artwork, in display order. This is the public
-content list, with submission emails, timestamps, and Drive links removed.
+The exhibition is at `/exhibition.html`. Edit `src/data/exhibition.json` to change
+artwork content. Each object in the top-level array is one artwork. The homepage
+preview and exhibition page both read this file. The exhibition page groups
+images by orientation: landscape, square, then portrait; JSON order is retained
+within each group.
 
-| Columns | Content |
+| JSON field | Content |
 | --- | --- |
 | `id` | Permanent URL identifier; keep it unchanged after QR codes are printed |
 | `title`, `artist` | Original artwork title and artist name |
-| `thumbnail` | Filename under `public/assets/exhibition/` |
-| `description_tr`, `description_en` | Artwork descriptions in both languages |
-| `artist_bio_tr`, `artist_bio_en` | Artist biographies in both languages |
-| `algorithm_notes_tr`, `algorithm_notes_en` | Algorithm and process explanations |
-| `medium_tr`, `medium_en` | Tools and medium in each language |
+| `thumbnail` | `/assets/exhibition/filename.webp` for a file under `public/assets/exhibition/` |
+| `descriptionTr`, `descriptionEn` | Artwork descriptions in Turkish and English |
+| `bioTr`, `bioEn` | Artist biographies in Turkish and English |
+| `algorithmsTr`, `algorithmsEn` | Algorithm and process explanations |
+| `mediumTr`, `mediumEn` | Tools and medium in each language |
 | `year` | Optional year |
-| `project_links` | Optional public project/source URLs, separated by newlines |
-| `artist_url` | Optional artist website |
+| `projectLinks` | Optional array of public project/source URLs |
+| `artistUrl` | Optional artist website URL |
 
-Keep the headers and save as UTF-8 CSV. Quoted commas and multiline paragraphs
-are supported; content is plain text. Blank artist names show a translated
-placeholder, blank biographies are omitted, and missing thumbnails use
-`placeholder.svg`. Thumbnail filenames may contain spaces. Images retain their
-full proportions without cropping on both pages. Keep the supplied image names
-or update the CSV if you rename a file.
+Keep JSON syntax valid: quote keys and text, separate fields and objects with commas,
+and write paragraph breaks as `\n`. Omit fields you have not filled in yet. Blank
+artist names show a translated placeholder, blank biographies are omitted, and
+missing thumbnails use an image coming soon message. Images retain their full
+proportions without cropping. If you rename an image, update its `thumbnail` path.
+The original `exhibition.csv` and translation/thumbnail mapping files are retained
+as source records; edits to them no longer affect the site.
 
-Both language versions are now in the CSV. Explicit translations take priority
-over the fallback Turkish copy in `src/data/exhibition-tr.js`. English mode uses
-`*_en`, Turkish mode uses `*_tr`. Original Turkish text remains in both columns
-where an English translation has not been supplied. The loader also accepts the
-original Google Forms question headers for future imports, but administrative
-fields are never included in the browser bundle.
-
-The homepage displays three random artwork previews every eight seconds,
+The homepage displays three random artworks with thumbnails every eight seconds,
 pausing during hover, keyboard focus, touch interaction, and while the tab is
 hidden. Adjust `rotationInterval` in `src/exhibition-preview.js` to change this.
-Each preview opens the selected artwork with its information expanded.
+Each preview opens the selected artwork with its information expanded when available.
 
 Each artwork has a direct link at `/exhibition.html#artwork-id`. An `id` must use
 lowercase letters, numbers, and hyphens; duplicate IDs stop the build. Keep the
@@ -51,7 +47,7 @@ continue to work. Run `npm run exhibition:links` to regenerate
 `exhibition-links.md`. There are no QR or copy-link controls on the page.
 
 Run `npm run test:exhibition` and `npm run build` after content updates. Invalid
-CSV stops the production build rather than publishing a broken exhibition.
+JSON stops the production build rather than publishing a broken exhibition.
 
 ## Search indexing
 

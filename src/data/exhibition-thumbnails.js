@@ -1,0 +1,28 @@
+// The submission export has upload links rather than public image filenames.
+// Match each exhibited work to its locally supplied WebP thumbnail.
+export const exhibitionThumbnails = {
+  inkField: '33 - Aluan Wang.webp',
+  'Altered State of Line': 'ASL_lossless - Bedirhan Ugur.webp',
+  Idoni: '20260927_133610 - Anna Carreras.webp',
+  'Résilience — Out of Band #2': 'CamilleRoux_Resilience-OOB-02_2024_90s - Camille Roux.webp',
+  Stratum: 'Stratum (5) - Dist Collective.webp',
+  monolith: 'monolith - oğuz ülgen tunç.webp',
+  'Semantic Noise': '001 - Agoston Nagy.webp',
+  'Glass shattered, but I still see.': 'trim_E112025F-AB03-4689-8A49-5797620C0668 (1) - Ali Osman Bayram.webp',
+  'Raphaël de Courville': 'raphael_s171029_alt_landscape_4min.webp',
+  Nihavend: 'Nihavendcomp (1) - Dilek Atimtay.webp',
+  Underlayer: 'underlayer_ooGUKH2gmWQybkjRbGTHhcCeo4utHPcxZUQsr8FxpegrRjZCmHS - Rob Scalera.webp',
+  chet: 'chet copy - Deniz Küçükcan.webp',
+  'stranded(ness)': 'loackme - Loïc Schwaller.webp',
+  'Some Parts of Me': '42626888 - Ahmad Moussa.webp',
+  "I think I'm going blind": 'pastelhope_computer_kill_lyric_vid - Negar Chamani.webp',
+  Feelings: 'ac_futures_neonscepter_feelings_synthwave_reactive_hexagons - Amir Chamani.webp',
+  'Traces of Intervention': 'TracesofIntervention - Gözde Damla TURHAN.webp',
+  Unravel: 'PosterImage2 - Buse.webp',
+  'Binary drift': 'Julien_Gachadoat_Binary_drift - Julien Gachadoat.webp',
+  'Metropolis IX': 'metropolis8000px (1) - Murat Atimtay.webp',
+  Moducon: 'Moducon (11) - Sadık Aksu.webp',
+  Memento: 'memento-loop - Berkin Dündar.webp',
+  'Sealed Lips, Echo Chamber: Unsaid. Undone': 'Sealed_Lips_Video - Ruveyda.webp',
+  'Thyme Flows': 'OnatSaygi-Tyhme Flows.webp',
+};

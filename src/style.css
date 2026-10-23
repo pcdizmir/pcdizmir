@@ -9,6 +9,7 @@
   --text-muted: #333333;
   --text-dim: #666666;
   --border-color: rgba(0, 0, 0, 0.08);
+  --accent-blue: rgba(4, 104, 255, 0.72);
   
   --font-serif: 'Inika', Georgia, serif;
   --font-sans: 'Inika', Georgia, serif;
@@ -192,7 +193,7 @@ a:hover {
   justify-content: center;
   padding: 0.85rem 2.25rem;
   border-radius: 9999px;
-  background: #000000;
+  background: var(--accent-blue);
   color: #ffffff !important;
   text-decoration: none;
   font-family: 'Inika', Georgia, serif !important;
@@ -204,7 +205,7 @@ a:hover {
 }
 
 .cta:hover {
-  background: #222222;
+  background: rgba(4, 104, 255, 0.85);
   transform: translateY(-2px);
 }
 
@@ -212,7 +213,7 @@ a:hover {
   display: flex;
   padding: 0.45rem 1.35rem;
   border-radius: 10px;
-  background: #000000;
+  background: var(--accent-blue);
   color: #ffffff !important;
   text-decoration: none;
   font-family: 'Inika', Georgia, serif !important;
@@ -221,7 +222,7 @@ a:hover {
 }
 
 .cta-small:hover {
-  background: #444444;
+  background: rgba(4, 104, 255, 0.85);
   
 }
 
@@ -310,15 +311,58 @@ a:hover {
 
 /* Hero Section (Bottom Left Layout) */
 .section-hero {
-  height: 95vh;
+  --hero-inline-padding: 3rem;
+  min-height: 95vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   align-items: flex-start;
   padding: 8rem 3rem 4rem;
   max-width: 1200px;
-  margin: 1 rem;
   margin-bottom: -0.2rem;
+}
+
+.hero-invitation {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  margin: auto 0 auto calc(-1 * var(--hero-inline-padding));
+  padding: 0 1.5rem;
+}
+
+.blue-text-card {
+  width: 100%;
+  max-width: 1000px;
+  padding: 1.5rem 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  background: var(--accent-blue);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(14px);
+  text-align: center;
+}
+
+.hero-invitation .blue-text-card {
+  transform: translateY(-1.5rem) scale(0.95);
+  transform-origin: center;
+}
+
+.hero-invitation p {
+  max-width: 760px;
+  margin: 0 auto 0.65rem;
+  color: #ffffff;
+  line-height: 1.5;
+}
+
+.hero-invitation p:last-child {
+  margin-bottom: 0;
+}
+
+.hero-invitation .hero-invitation-lead {
+  max-width: none;
+  margin-bottom: 2rem;
+  font-size: clamp(2.5rem, 7vw, 5.4rem);
+  font-weight: 700;
+  line-height: 1.15;
 }
 
 .hero-text-card {
@@ -347,9 +391,28 @@ a:hover {
   min-width: 0;
 }
 
-.workshops-heading,
-.workshop-details {
+.workshop-card {
   grid-column: 1 / -1;
+  justify-self: center;
+  width: 100%;
+  text-align: left;
+}
+
+.workshop-main {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.workshop-main > * {
+  min-width: 0;
+}
+
+.workshop-card .workshop-details {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color);
 }
 
 .workshop-facts {
@@ -537,6 +600,30 @@ figcaption {
   scroll-margin-top: 7rem;
 }
 
+.exhibition-intro-card {
+  margin: 0 auto 2rem;
+}
+
+.exhibition-intro-card > h2,
+.exhibition-intro-card > p {
+  color: #ffffff;
+  text-align: left;
+}
+
+.exhibition-intro-card > p {
+  max-width: 760px;
+  margin: 0;
+}
+
+.exhibition-intro-card .exhibition-preview {
+  margin-top: 1.5rem;
+}
+
+.exhibition-intro-card .exhibition-preview-card {
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.9);
+}
+
 .exhibition-preview {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -587,14 +674,24 @@ figcaption {
   margin-top: 1.5rem;
 }
 
+.exhibition-intro-card > .exhibition-preview-link {
+  max-width: none;
+  margin-top: 1.5rem;
+}
+
+.exhibition-intro-card .exhibition-preview-link a {
+  color: #ffffff;
+  font-weight: 700;
+}
+
 @media (max-width: 650px) {
   .exhibition-preview {
     grid-template-columns: none;
     grid-auto-flow: column;
-    grid-auto-columns: 85%;
+    grid-auto-columns: 100%;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    padding: 0.5rem 0.25rem 1rem;
+    padding: 0 0 1rem;
   }
   .exhibition-preview .exhibition-preview-card {
     padding: 1rem;
@@ -794,6 +891,7 @@ figcaption {
     padding: 0.45rem 0.75rem;
   }
   .section-hero {
+    --hero-inline-padding: 1.5rem;
     padding: 7rem 1.5rem 3rem;
   }
   .hero-text-card, .text-card {
@@ -802,6 +900,10 @@ figcaption {
   .section-intro, .open-call, .side-by-side {
     grid-template-columns: 1fr;
     gap: 2.5rem;
+  }
+  .workshop-main {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
   .swiper-slide {
     width: 90%;

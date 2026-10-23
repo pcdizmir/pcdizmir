@@ -1,7 +1,8 @@
-import artworks from 'virtual:exhibition-preview';
+import allArtworks from 'virtual:exhibition-preview';
 import { selectPreviewArtworks } from './exhibition-selection.js';
 
 const rotationInterval = 8000;
+const artworks = allArtworks.filter(artwork => artwork.thumbnail);
 
 export function renderExhibitionPreview() {
   const container = document.getElementById('exhibition-preview');
@@ -45,10 +46,10 @@ export function renderExhibitionPreview() {
     slots.forEach(({ card, image, title, artist }, index) => {
       const artwork = current[index];
       card.href = `/exhibition.html#${artwork.id}`;
-      image.src = artwork.thumbnail || '/assets/exhibition/placeholder.svg';
+      image.src = artwork.thumbnail;
       title.textContent = artwork.title;
       artist.textContent = artwork.artist;
-      artist.hidden = !artwork.artist;
+      artist.hidden = !artwork.artist || artwork.artist === artwork.title;
     });
     updateLabels();
   }

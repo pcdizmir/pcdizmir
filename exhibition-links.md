@@ -2,16 +2,13 @@
 
 Use these URLs to generate the printed QR codes. Each link opens the artwork and expands its information. The live site must include the latest exhibition deployment.
 
-- **Reaction Diffusion Explorer** — Gorilla Sun
-  https://pcdizmir.kodart.xyz/exhibition.html#reaction-diffusion-explorer
-
-- **inkField**
+- **inkField** — Aluan Wang
   https://pcdizmir.kodart.xyz/exhibition.html#inkfield
 
 - **Altered State of Line** — Bedirhan Ugur
   https://pcdizmir.kodart.xyz/exhibition.html#altered-state-of-line
 
-- **Idoni**
+- **Idoni** — Anna Carreras
   https://pcdizmir.kodart.xyz/exhibition.html#idoni
 
 - **Résilience — Out of Band #2** — Camille Roux
@@ -23,16 +20,16 @@ Use these URLs to generate the printed QR codes. Each link opens the artwork and
 - **monolith** — Oğuz Ülgen Tunç
   https://pcdizmir.kodart.xyz/exhibition.html#monolith
 
-- **Semantic Noise**
+- **Semantic Noise** — Agoston Nagy
   https://pcdizmir.kodart.xyz/exhibition.html#semantic-noise
 
-- **Glass shattered, but I still see.**
+- **Glass shattered, but I still see.** — Nubplus
   https://pcdizmir.kodart.xyz/exhibition.html#glass-shattered-but-i-still-see
 
-- **Nihavend**
+- **Nihavend** — SonicChimes
   https://pcdizmir.kodart.xyz/exhibition.html#nihavend
 
-- **Underlayer**
+- **Underlayer** — Rob Scalera
   https://pcdizmir.kodart.xyz/exhibition.html#underlayer
 
 - **chet** — Deniz Küçükcan
@@ -49,3 +46,30 @@ Use these URLs to generate the printed QR codes. Each link opens the artwork and
 
 - **Feelings** — AC Futures
   https://pcdizmir.kodart.xyz/exhibition.html#feelings
+
+- **Traces of Intervention** — Gozde Damla Turhan
+  https://pcdizmir.kodart.xyz/exhibition.html#traces-of-intervention
+
+- **Unravel** — Buse Anıl
+  https://pcdizmir.kodart.xyz/exhibition.html#unravel
+
+- **Binary drift** — Julien Gachadoat
+  https://pcdizmir.kodart.xyz/exhibition.html#binary-drift
+
+- **Metropolis IX** — Murat Atimtay
+  https://pcdizmir.kodart.xyz/exhibition.html#metropolis-ix
+
+- **Moducon** — Sadık Aksu | xnmtrc
+  https://pcdizmir.kodart.xyz/exhibition.html#moducon
+
+- **Memento** — Berkin Dündar
+  https://pcdizmir.kodart.xyz/exhibition.html#memento
+
+- **Sealed Lips, Echo Chamber: Unsaid. Undone** — Rüveyda Cengiz
+  https://pcdizmir.kodart.xyz/exhibition.html#sealed-lips-echo-chamber-unsaid-undone
+
+- **Thyme Flows** — Onat Saygı / Algorizma
+  https://pcdizmir.kodart.xyz/exhibition.html#thyme-flows
+
+- **Raphaël de Courville**
+  https://pcdizmir.kodart.xyz/exhibition.html#raphael-de-courville
