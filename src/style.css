@@ -347,6 +347,14 @@ a:hover {
   color: var(--text-muted);
 }
 
+.hero-countdown-past-date {
+  margin: 0;
+  font-size: clamp(1.35rem, 2.5vw, 2rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: #1556bf;
+}
+
 .hero-countdown-values {
   display: flex;
   justify-content: flex-end;

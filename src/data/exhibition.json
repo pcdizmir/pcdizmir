@@ -269,7 +269,8 @@
     "algorithmsTr": "Algoritmalar, yazma hızını ve duraklamaları parçacıkların hareketini, dağılmasını, ses yoğunluğunu ve ışık yoğunluğunu belirleyen görsel kurallara dönüştürür. Hız arttıkça bozulma yoğunlaşır; kullanıcı durduğunda harfler yeniden bir araya gelir. Bu kurallara dayalı sistem, metni statik bir görüntü olmaktan çıkararak sürekli değişen bir forma dönüştürür. Böylece algoritma, kaygıyı yalnızca bir bozulma olarak değil, estetik ve canlı bir deneyim olarak ifade ederken kullanıcının davranışını görünür kılar.",
     "algorithmsEn": "Algorithms turn typing speed and pauses into visual rules that control particle movement and dispersion, sound intensity, and brightness. Distortion grows as speed increases; when the user stops, the letters come together again. This rule based system transforms text from a static image into a continuously changing form. The algorithm makes the user’s behavior visible while expressing anxiety as a vivid aesthetic experience.",
     "mediumTr": "p5.js",
-    "mediumEn": "p5.js"
+    "mediumEn": "p5.js",
+    "projectLinks": ["https://unravelinstallation.netlify.app/"]
   },
   {
     "id": "binary-drift",
@@ -353,7 +354,10 @@
     "algorithmsTr": "Algoritmalar ve kurallar, projenin temel yapı taşını oluşturur; her klavye tuş vuruşunu gizli şifrelere dönüştüren ve gecikme pedalı ile geri besleme döngülerini tetikleyerek iç monologu kaotik bir duyusal çöküşe çeviren dijital sistemi yönetir.",
     "algorithmsEn": "Algorithms and rules are the foundation of the project. They govern the digital system that transforms each keystroke into a hidden cipher and triggers the delay pedal and feedback loops, turning an inner monologue into chaotic sensory collapse.",
     "mediumTr": "p5.js",
-    "mediumEn": "p5.js"
+    "mediumEn": "p5.js",
+    "projectLinks": [
+      "https://sealed-lips-interactive.netlify.app/"
+    ]
   },
   {
     "id": "thyme-flows",

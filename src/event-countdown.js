@@ -19,6 +19,7 @@ export function initializeEventCountdown() {
   const title = countdown.querySelector('.hero-countdown-title');
   const values = countdown.querySelector('.hero-countdown-values');
   const status = countdown.querySelector('.hero-countdown-status');
+  const past = countdown.querySelector('.hero-countdown-past');
   const units = Object.fromEntries(
     [...countdown.querySelectorAll('[data-countdown-unit]')]
       .map((element) => [element.dataset.countdownUnit, element])
@@ -28,12 +29,16 @@ export function initializeEventCountdown() {
     const now = Date.now();
 
     if (now >= NEXT_DAY) {
-      countdown.hidden = true;
+      title.hidden = true;
+      values.hidden = true;
+      status.hidden = true;
+      past.hidden = false;
       window.clearInterval(intervalId);
       return;
     }
 
     const hasStarted = now >= EVENT_START;
+    past.hidden = true;
     title.hidden = hasStarted;
     values.hidden = hasStarted;
     status.hidden = !hasStarted;
