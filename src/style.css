@@ -323,6 +323,61 @@ a:hover {
   margin-bottom: -0.2rem;
 }
 
+.hero-bottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+  width: calc(100vw - 2 * var(--hero-inline-padding));
+}
+
+.hero-brand {
+  min-width: 0;
+}
+
+.hero-countdown {
+  flex: 0 0 auto;
+  text-align: right;
+}
+
+.hero-countdown-title,
+.hero-countdown-status {
+  margin: 0 0 0.45rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.hero-countdown-values {
+  display: flex;
+  justify-content: flex-end;
+  gap: clamp(0.55rem, 1.5vw, 1.2rem);
+}
+
+.hero-countdown-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 2.5rem;
+  line-height: 1.2;
+}
+
+.hero-countdown-unit strong {
+  font-size: clamp(1.35rem, 2.5vw, 2rem);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: #1556bf;
+}
+
+.hero-countdown-unit span {
+  margin-top: 0.3rem;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.hero-countdown [hidden] {
+  display: none;
+}
+
 .hero-invitation {
   display: flex;
   justify-content: center;
@@ -938,6 +993,61 @@ figcaption {
   }
   .plan-row .day {
     min-width: auto;
+  }
+}
+
+@media (max-width: 700px) {
+  .section-hero {
+    min-height: 100svh;
+    padding-top: 6.5rem;
+    padding-bottom: 2rem;
+  }
+
+  .hero-bottom {
+    display: contents;
+  }
+
+  .hero-brand {
+    order: 2;
+    width: 100%;
+  }
+
+  .hero-brand h1 {
+    font-size: clamp(2.25rem, 11vw, 3.5rem);
+  }
+
+  .hero-brand .hero-subtitle {
+    font-size: clamp(1.2rem, 5vw, 1.65rem);
+  }
+
+  .hero-brand .hero-meta h4 {
+    font-size: 1rem;
+  }
+
+  .hero-invitation {
+    order: 1;
+    width: 100%;
+    margin: auto 0;
+    padding: 0;
+  }
+
+  .hero-invitation .blue-text-card {
+    padding: 1.25rem;
+    transform: none;
+  }
+
+  .hero-invitation .hero-invitation-lead {
+    margin-bottom: 1rem;
+    font-size: clamp(1.5rem, 6vw, 2rem);
+  }
+
+  .hero-invitation p:not(.hero-invitation-lead) {
+    font-size: 0.95rem;
+  }
+
+  .hero-countdown {
+    order: 0;
+    align-self: flex-end;
   }
 }
 

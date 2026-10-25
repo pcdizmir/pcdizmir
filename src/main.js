@@ -5,10 +5,12 @@ import 'swiper/css/bundle';
 import './style.css';
 import { initializeLanguageToggle } from './language.js';
 import { renderExhibitionPreview } from './exhibition-preview.js';
+import { initializeEventCountdown } from './event-countdown.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   renderExhibitionPreview();
   initializeLanguageToggle();
+  initializeEventCountdown();
   // 1. Initialize Smooth Eased Particle Background (Black-on-White, Low Kinetic Energy)
   const canvas = document.getElementById('bg-canvas');
   if (canvas) {
