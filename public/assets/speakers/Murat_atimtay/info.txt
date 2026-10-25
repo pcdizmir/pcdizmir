@@ -1,5 +1,7 @@
-Murat Atimtay is a computational artist and creative technologist exploring the relationships between people, technology, and the systems that connect them. He is drawn to the rituals we form around machines and the ways we find meaning, presence, and connection in invisible digital processes.
+TR
 
-His work has been shown in Times Square, London, and Frankfurt, as well as at the Lights in Jerusalem Festival, where he presented an interactive installation in 2017. In 2019, his algorithmic tattoo project, Heliantone, received first prize at the Frankfurt Tattoo Convention.
+Murat Atimtay, insanlar, teknoloji ve onları birbirine bağlayan sistemler arasındaki ilişkileri araştıran bir hesaplamalı sanatçı ve yaratıcı teknoloji uzmanıdır. Dijital ve fiziksel eserleri uluslararası sergilerde yer almıştır. Makinelerle kurduğumuz ritüellerin ve görünmez dijital süreçlerin nasıl anlam ve bağ yarattığıyla ilgilenir. Etkileşimli enstalasyonlar, jeneratif sanat ve kalemli çizicilerle çalışmakta olup çocuklara ve yetişkinlere yaratıcı kodlama eğitimi vermektedir.
 
-He continues to work in generative art, pen plotter drawing, and interactive installations, and teaches creative coding to children and adults through Kodart.
+EN
+
+Murat Atimtay is a computational artist and creative technologist exploring the relationships between people, technology, and the systems that connect them. His digital and physical works have been shown in international exhibitions. He is interested in how our rituals around machines and invisible digital processes create meaning and connection. He works with interactive installations, generative art, and pen plotters, and teaches creative coding to children and adults.

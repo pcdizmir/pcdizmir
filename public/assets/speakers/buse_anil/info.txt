@@ -1,0 +1,7 @@
+EN
+
+Buse Anıl is an undergraduate student in Visual Communication Design and a Flooow Lab assistant at İzmir University of Economics. Her design practice contains creative coding with p5.js, game development in Unity, and physical computing using Arduino to bridge digital interfaces with tangible objects. She also works on the mechanics and visual design of educational and urban themed board games.
+
+TR
+
+Buse Anıl, İzmir Ekonomi Üniversitesi Görsel İletişim Tasarımı lisans öğrencisi ve Flooow Lab asistanıdır. Tasarım pratiği; p5.js ile yaratıcı kodlamayı, Unity ile oyun geliştirmeyi ve dijital arayüzleri somut nesnelerle buluşturmak için Arduino kullanarak fiziksel bilişimi kapsar. Eğitsel ve kent temalı kutu oyunlarının mekanikleri ve görsel tasarımı üzerinde de çalışmaktadır.
