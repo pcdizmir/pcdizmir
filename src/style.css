@@ -452,6 +452,50 @@ a:hover {
   align-items: center;
 }
 
+.about-card {
+  grid-column: 1 / -1;
+  max-width: none;
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: 2.5rem;
+  align-items: center;
+  text-align: left;
+}
+
+.about-card .intro-figure {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.about-card .intro-figure img {
+  display: block;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.about-card h2,
+.about-card .intro-content > p,
+.about-card .intro-links a {
+  color: #ffffff;
+}
+
+.about-card .intro-content > p {
+  font-size: 1rem;
+}
+
+.about-card .intro-content > p:last-of-type {
+  margin-bottom: 1rem;
+}
+
+.about-card .intro-links a:hover,
+.about-card .intro-links a:focus-visible {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.18);
+}
+
 #workshop > * {
   min-width: 0;
 }
@@ -984,6 +1028,13 @@ figcaption {
   .section-intro, .open-call, .side-by-side {
     grid-template-columns: 1fr;
     gap: 2.5rem;
+  }
+  .about-card {
+    grid-template-columns: 1fr;
+  }
+  .about-card .intro-figure {
+    max-width: 440px;
+    margin: 0 auto;
   }
   .workshop-main {
     grid-template-columns: 1fr;
