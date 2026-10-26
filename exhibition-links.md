@@ -32,7 +32,7 @@ Use these URLs to generate the printed QR codes. Each link opens the artwork and
 - **Underlayer** — Rob Scalera
   https://pcdizmir.kodart.xyz/exhibition.html#underlayer
 
-- **chet** — Deniz Küçükcan
+- **possibilities // 01** — Deniz Küçükcan
   https://pcdizmir.kodart.xyz/exhibition.html#chet
 
 - **stranded(ness)** — loackme

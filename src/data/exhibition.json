@@ -165,12 +165,12 @@
   },
   {
     "id": "chet",
-    "title": "chet",
+    "title": "possibilities // 01",
     "artist": "Deniz Küçükcan",
     "artistLocation": "İzmir",
     "thumbnail": "/assets/exhibition/chet copy - Deniz Küçükcan.webp",
-    "descriptionTr": "Şu anda p5.js üzerinde geliştirmekte olduğum aracın çıktıları.",
-    "descriptionEn": "just outputs of my tool im currently working on p5js",
+    "descriptionTr": "p5.js üzerinde geliştirmekte olduğum özel bir creative coding aracının ilk çıktıları.\n\nGörüntünün piksellerini gerçek zamanlı analiz edip bayer dithering algoritmasıyla sınırlı bir renk paletine indirgeyen, ardından nokta, piksel ve karakter matrislerine dönüştüren deneysel bir çalışma.",
+    "descriptionEn": "The first outputs of a custom creative coding tool I am developing in p5.js.\n\nAn experimental work that analyzes an image’s pixels in real time, reduces them to a limited color palette using the Bayer dithering algorithm, and then transforms them into matrices of dots, pixels, and characters.",
     "mediumTr": "p5js",
     "mediumEn": "p5js"
   },
