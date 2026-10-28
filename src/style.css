@@ -228,6 +228,11 @@ a:hover {
   
 }
 
+.header-actions a[href="#community"],
+.workshop-details .cta {
+  border-radius: 8px;
+}
+
 
 /* Clean Top Header */
 .header-actions {
@@ -943,7 +948,7 @@ figcaption {
   min-height: 44px;
   padding: 0.6rem 1.25rem;
   border: 1px solid currentColor;
-  border-radius: 999px;
+  border-radius: 8px;
   color: var(--text-main);
   text-decoration: none;
 }
