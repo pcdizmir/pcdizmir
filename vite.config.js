@@ -2,7 +2,7 @@ import { defineConfig } from 'vite';
 import { readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { parseExhibition } from './src/exhibition-data.js';
-import { sortArtworksByOrientation, webpDimensions } from './scripts/exhibition-orientation.mjs';
+import { imageDimensions, sortArtworksByOrientation } from './scripts/exhibition-orientation.mjs';
 
 const exhibitionJson = fileURLToPath(new URL('./src/data/exhibition.json', import.meta.url));
 const exhibitionModule = 'virtual:exhibition-artworks';
@@ -27,7 +27,7 @@ function exhibitionContent() {
         if (!thumbnail) return null;
         const imagePath = fileURLToPath(new URL(`./public${thumbnail}`, import.meta.url));
         this.addWatchFile(imagePath);
-        return webpDimensions(await readFile(imagePath));
+        return imageDimensions(await readFile(imagePath));
       }));
       return `export default ${JSON.stringify(sortArtworksByOrientation(artworks, dimensions))};`;
     },

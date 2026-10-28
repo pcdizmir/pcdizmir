@@ -407,5 +407,21 @@
     "projectLinks": [
       "https://ordinals.com/content/00023040711629c182f053961c3a0e15d4f4228cf53462c01067629521046c33i0"
     ]
+  },
+  {
+    "id": "son-of-aladdin",
+    "title": "Son of Aladdin",
+    "artist": "Yusuf Samet Aydın ve Şeyma Gül Aydın",
+    "artistLocation": "İstanbul",
+    "thumbnail": "/assets/exhibition/project_nom.png",
+    "descriptionTr": "Binbir Gece Masalları'ndaki Aladdin hikâyesi ile İstanbul'da bir pazar satıcısı olan babamız Alaattin'in hayatından esinlenen Son of Aladdin, ben ve kedim Nabu'nun İstanbul'dan babamızın doğduğu Malatya'ya, oradan Babil'e ve Mars'a uzanan macerasını anlatıyor. Proje ayrıca aile tarihimizden, Nemrut Dağı ve Mezopotamya'nın tarihsel ve mitolojik dünyasından besleniyor.",
+    "descriptionEn": "Inspired by the story of Aladdin in One Thousand and One Nights and by the life of our father Alaattin, a market vendor in Istanbul, Son of Aladdin tells the story of an adventure that takes my cat Nabu and me from Istanbul to Malatya, where our father was born, then to Babylon and Mars. The project also draws on our family history and the historical and mythological worlds of Mount Nemrut and Mesopotamia.",
+    "bioTr": "Yusuf Samet Aydın, algoritmik sanat ve 3D animasyon alanlarına odaklanan İstanbul merkezli bir sanatçıdır. Kardeşi Şeyma Gül Aydın ile birlikte kurdukları Project N.O.M. (Proje: Nemrut'tan Olympus Mons'a) adlı bağımsız animasyon stüdyosunda çalışmalarını sürdürüyorlar. Geliştirdikleri Algorithmic VFX yöntemiyle p5.js tabanlı yaratıcı kodlamayı 3D animasyonla birleştirerek kendi animasyon projeleri üzerinde çalışıyorlar.",
+    "bioEn": "Yusuf Samet Aydın is an Istanbul-based artist focused on algorithmic art and 3D animation. He and his sister Şeyma Gül Aydın founded the independent animation studio Project N.O.M. (Project: From Nemrut to Olympus Mons). Their Algorithmic VFX approach combines p5.js creative coding with 3D animation for their animation projects.",
+    "mediumTr": "p5.js, 3D animasyon",
+    "mediumEn": "p5.js, 3D animation",
+    "projectLinks": [
+      "https://www.youtube.com/watch?v=BVP_E6TB0S8"
+    ]
   }
 ]

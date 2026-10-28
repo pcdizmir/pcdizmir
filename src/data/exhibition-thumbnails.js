@@ -25,4 +25,5 @@ export const exhibitionThumbnails = {
   Memento: 'memento-loop - Berkin Dündar.webp',
   'Sealed Lips, Echo Chamber: Unsaid. Undone': 'Sealed_Lips_Video - Ruveyda.webp',
   'Thyme Flows': 'OnatSaygi-Tyhme Flows.webp',
+  'Son of Aladdin': 'project_nom.png',
 };

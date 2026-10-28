@@ -19,6 +19,13 @@ export function webpDimensions(bytes) {
   throw new Error(`Unsupported WebP format: ${format}`);
 }
 
+export function imageDimensions(bytes) {
+  if (bytes.length >= 24 && bytes.subarray(0, 8).equals(Buffer.from([137, 80, 78, 71, 13, 10, 26, 10]))) {
+    return { width: bytes.readUInt32BE(16), height: bytes.readUInt32BE(20) };
+  }
+  return webpDimensions(bytes);
+}
+
 function orientationRank(size) {
   if (!size) return 3;
   const ratio = size.width / size.height;

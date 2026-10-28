@@ -4,7 +4,7 @@ import { readFileSync, existsSync } from 'node:fs';
 import { parseExhibition } from '../src/exhibition-data.js';
 import { artworkId, artworkIndexForHash, artworkUrl } from '../src/exhibition-links.js';
 import { selectPreviewArtworks } from '../src/exhibition-selection.js';
-import { sortArtworksByOrientation, webpDimensions } from '../scripts/exhibition-orientation.mjs';
+import { imageDimensions, sortArtworksByOrientation, webpDimensions } from '../scripts/exhibition-orientation.mjs';
 
 const sample = {
   id: 'sehir-izmir',
@@ -52,6 +52,7 @@ test('exhibition groups landscape, square, and portrait images without changing 
     'landscape-a', 'landscape-b', 'square', 'portrait-a', 'portrait-b',
   ]);
   assert.equal(webpDimensions(readFileSync(new URL('../public/assets/exhibition/monolith - oğuz ülgen tunç.webp', import.meta.url))).width, 686);
+  assert.deepEqual(imageDimensions(readFileSync(new URL('../public/assets/exhibition/project_nom.png', import.meta.url))), { width: 800, height: 450 });
 });
 
 test('artwork links survive title changes and reordering', () => {
@@ -103,21 +104,25 @@ test('invalid JSON, identities, paths, and links fail validation', () => {
 });
 
 test('the JSON includes all artwork details and mapped thumbnails', () => {
-  assert.equal(artworks.length, 25);
-  assert.equal(artworks.filter(work => work.artistLocation).length, 25);
+  assert.equal(artworks.length, 26);
+  assert.equal(artworks.filter(work => work.artistLocation).length, 26);
   assert.equal(artworks.find(work => work.id === 'noema').artistLocation, 'Poland/Georgia');
   assert.equal(artworks.find(work => work.id === 'some-parts-of-me').artistLocation, 'Düsseldorf');
   assert.equal(artworks.find(work => work.id === 'underlayer').artistLocation, 'İstanbul');
   assert.ok(artworks.filter(work => work.artistLocation === 'İzmir').length > 0);
   assert.equal(artworks.find(work => work.id === 'noema').artist, 'Paweł Dudko');
   assert.equal(artworks.find(work => work.id === 'traces-of-intervention').artist, 'Gözde Damla Turhan');
-  assert.equal(artworks.filter(work => work.thumbnail).length, 25);
+  assert.equal(artworks.filter(work => work.thumbnail).length, 26);
+  const aladdin = artworks.find(work => work.id === 'son-of-aladdin');
+  assert.equal(aladdin.artist, 'Yusuf Samet Aydın ve Şeyma Gül Aydın');
+  assert.equal(aladdin.thumbnail, '/assets/exhibition/project_nom.png');
+  assert.deepEqual(aladdin.projectLinks, ['https://www.youtube.com/watch?v=BVP_E6TB0S8']);
   assert.equal(artworks.find(work => work.title === 'Memento').thumbnail, '/assets/exhibition/memento-loop - Berkin Dündar.webp');
   assert.equal(artworks.find(work => work.title === 'Glass shattered, but I still see.').thumbnail, '/assets/exhibition/trim_E112025F-AB03-4689-8A49-5797620C0668 (1) - Ali Osman Bayram.webp');
   const raphael = artworks.find(work => work.title === 'Raphaël de Courville');
   assert.equal(raphael.artist, 'Raphaël de Courville');
   assert.equal(raphael.thumbnail, '/assets/exhibition/raphael_s171029_alt_landscape_4min.webp');
-  assert.equal(raphael.descriptionTr, '');
+  assert.ok(raphael.descriptionTr);
   for (const work of artworks) {
     assert.ok(existsSync(new URL(`../public${work.thumbnail}`, import.meta.url)), work.thumbnail);
     if (work.mediumTr || work.mediumEn) assert.ok(work.medium);
@@ -125,7 +130,7 @@ test('the JSON includes all artwork details and mapped thumbnails', () => {
 });
 
 test('Turkish and English artwork text remains available', () => {
-  for (const title of ['inkField', 'Idoni', 'Résilience — Out of Band #2', 'Stratum', 'Semantic Noise', 'chet', 'stranded(ness)', 'Some Parts of Me', "I think I'm going blind", 'Feelings']) {
+  for (const title of ['inkField', 'Idoni', 'Résilience — Out of Band #2', 'Stratum', 'Semantic Noise', 'possibilities // 01', 'stranded(ness)', 'Some Parts of Me', "I think I'm going blind", 'Feelings', 'Son of Aladdin']) {
     const work = artworks.find(work => work.title === title);
     assert.ok(work.descriptionTr && work.descriptionEn, title);
     assert.notEqual(work.descriptionTr, work.descriptionEn, title);
