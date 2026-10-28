@@ -76,3 +76,6 @@ Use these URLs to generate the printed QR codes. Each link opens the artwork and
 
 - **Noema** — Paweł Dudko
   https://pcdizmir.kodart.xyz/exhibition.html#noema
+
+- **Son of Aladdin** — Yusuf Samet Aydın ve Şeyma Gül Aydın
+  https://pcdizmir.kodart.xyz/exhibition.html#son-of-aladdin
